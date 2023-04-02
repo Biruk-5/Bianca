@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<style type="text/css">
+*{
+user-select:none;
+}
+body {
+display:flex;
+justify-content:center;
+align-items:center;
+height:80vh;
+background:#191919;
+}
+section {
+transition:all .5s;
+border:.5px solid gold;
+overflow:hidden;
+width:90px;
+height:350px;
+background:#FF416C;
+
+box-shadow:0px 0px 2px white;
+border-radius:20px;
+animation:section 10s linear infinite;
+}/*
+@keyframes section{
+50%{
+background:linear-gradient(180deg,#9708CC,#8C1BAB);
+}
+80%{
+background:linear-gradient(180deg,#9708CC,#6018DC);
+}
+100%{
+background:linear-gradient(180deg,#00B09B,#32CCBC);
+}
+
+}*/
+.menu{
+transition:all .5s;
+width:35px;
+height:3px ;
+background:black;
+margin:5px;
+cursor:pointer;
+border-radius:5px;
+transform:translate(25px,20px);
+}
+.profile {
+transition:all .5s;
+transition:all .5s;
+width:60px;
+border-radius:50%;
+transform:translate(15px,40px);
+filter:saturate(20px);
+box-shadow:0px 0px 3px black;
+}
+.hr{
+transition:all .5s;
+margin-top:50px;
+display:none;
+opacity:.4;
+}
+.profile-smalles{
+transition:all .5s;
+margin-bottom:20px;
+}
+.profiles{
+transition:all .5s;
+display:flex;
+flex-direction:column;
+margin-top:55px;
+margin-left:30px;
+position:absolute;
+width:30px;
+}
+.label:nth-child(4) {
+color:lime;
+}
+.label:nth-child(6) {
+color:white;
+}
+.label:nth-child(2) {
+color:#FFF720;
+}
+.label {
+transition:all .5s;
+position:absolute;
+margin:30px;
+font-variant:small-caps;
+display:none;
+cursor:pointer;
+font-weight:bold;
+}
+.home{
+transition:all .5s;
+position:absolute;
+top:-24px;
+left:10px;
+cursor:pointer;
+}
+.profilesmall {
+transition:all .5s;
+position:absolute;
+top:30px;
+left:10px;
+}
+.call {
+transition:all .5s;
+position:absolute;
+top:75px;
+left:13px;
+cursor:pointer;
+}
+.setting{
+transition:all .5s;
+position:absolute;
+top:125px;
+left:13px;
+}
+.profile-smallb:hover:profilesmall {
+cursor:pointer;
+background:red;
+transition:all .5s;
+}
+h1{
+width:53px;
+overflow:hidden;
+border-right:2px solid #0665F5;
+animation:a 8s steps(50) infinite;
+white-space:nowrap;
+font-weight:bold;
+font-size:25px;
+color:snow;
+position:absolute;
+top:70vh;
+left:10px;
+}/*
+h1::after{
+content:"";
+position:absolute;
+width:2px;
+height:20px;
+background:#00E5FF;
+left:75px;
+top:304px;
+animation:s 8s steps(50) infinite;
+}
+@keyframes s{
+50%{
+left:100%;
+}
+}*/
+@keyframes a{
+50%{
+width:95%;
+}
+}
+.color {
+letter-spacing:1px;
+color:#00E5FF;
+font-variant:small-caps;
+}
+@media screen and (min-width: 500px) {
+       body {
+transform: scale(3);
+margin:30px 320px;
+       }
+h1{
+top:55vh;
+}
+    }
+</style>
+<script type="text/javascript">
+function myfun(){
+let a = document.getElementById("section")
+let imageprofile= document.getElementById("image-profile")
+let f= document.getElementById("first")
+let s= document.getElementById("second")
+let t= document.getElementById("third")
+let text= document.getElementById("label")
+let textb= document.getElementById("labelb")
+let textc= document.getElementById("labelc")
+let textd= document.getElementById("labeld")
+let row= document.getElementById("hr")
+if(a.style.width=="250px"||a.style.backgroundColor=="#FF715B"||imageprofile.style.width=="150px"||imageprofile.style.marginLeft=="35px"||imageprofile.style.marginTop=="-35px"||a.style.height=="390px"||row.style.display=="block"||text.style.display=="block"||textb.style.display=="block"||textc.style.display=="block"||textd.style.display=="block"||f.style.transform=="rotate(40deg) translate(20px,10px)"||t.style.transform=="rotate(-40deg) translate(-2px,15px)"||s.style.display=="none"){
+a.style.width="90px"
+imageprofile.style.width="60px"
+a.style.backgroundColor="#2575FC"
+imageprofile.style.marginLeft="0px"
+imageprofile.style.marginTop="0px"
+row.style.display="none"
+a.style.height="350px"
+text.style.display="none"
+textb.style.display="none"
+textc.style.display="none"
+textd.style.display="none"
+f.style.transform="translate(25px,20px)"
+s.style.transform="translate(25px,20px)"
+t.style.transform="translate(25px,20px)"
+s.style.display="block"
+}else{
+a.style.width="250px"
+a.style.height="390px"
+a.style.backgroundColor="#FF416C"
+imageprofile.style.width="150px"
+imageprofile.style.marginLeft="35px"
+imageprofile.style.marginTop="-35px"
+row.style.display="block"
+text.style.display="block"
+textb.style.display="block"
+textc.style.display="block"
+textd.style.display="block"
+f.style.transform="rotate(40deg) translate(20px,10px)"
+t.style.transform="rotate(-40deg) translate(-2px,15px)"
+s.style.display="none"
+}
+}
+function home(){
+alert("home")
+}
+function profile(){
+alert("profile")
+}
+function call(){
+alert("call")
+}
+function setting(){
+alert("setting")
+}
+setInterval(
+function(){
+let a = document.getElementById("h").innerHTML="software developer!"
+},8000)
+setInterval(
+function(){
+let a = document.getElementById("h").innerHTML=" website developer !"
+},16000)
+setInterval(
+function(){
+let a = document.getElementById("h").innerHTML="front end developer!"
+},24000)
+function will(){
+alert("NOW IT ONLY A WILL!")
+}
+</script>
+<body>
+<section id="section" >
+<div id="first"  class="menu first" onclick="myfun()" >
+</div><div id="second"  class="menu second" onclick="myfun()" >
+</div><div  id="third" class="menu third" onclick="myfun()" >
+</div>
+<img id="image-profile"  src="20221211_203240.jpg" class="profile" >
+<div class="profiles" >
+<img class="profile-smalles profile-smalla" id="profile-smalla" src="ic_action_home.png" ><p class="label home" id="label" onclick="home()">home</p>
+<img class="profile-smalles profile-smallb" id="profile-smallb" src="user-icon.png" ><p class="label profilesmall " onclick="profile()" id="labelb">profile</p>
+<img class="profile-smalles profile-smallc" id="profile-smallc" src="0xz.png" ><p class="label call" onclick="call()" id="labelc">call</p>
+<img class="profile-smalles profile-smalld" id="profile-smalld" src="ic_settings_white_.png" ><p class="label setting" onclick="setting()" id="labeld">setting</p>
+</div>
+<hr class="hr" id="hr" >
+</section>
+<h1 onclick="will()">I am <span class="color" id="h" >front end developer</span></h1>
+</body>
+</html>
